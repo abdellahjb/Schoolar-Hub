@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque ScholarHub - Accueil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-book-half"></i>
+                <span>ScholarHub</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="books.html">Livres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="categories.html">Catégories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link admin-link" href="admin.html">
+                            <i class="bi bi-shield-lock"></i> Admin
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Découvrez Votre Prochaine Grande Lecture</h1>
+                        <p class="hero-subtitle">Explorez des milliers de livres dans tous les genres. Réservez, lisez et élargissez vos horizons.</p>
+                        <div class="hero-buttons">
+                            <a href="books.html" class="btn btn-primary btn-lg">Parcourir les Livres</a>
+                            <a href="categories.html" class="btn btn-outline-light btn-lg">Explorer les Catégories</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <div class="floating-book book-1">
+                            <i class="bi bi-book"></i>
+                        </div>
+                        <div class="floating-book book-2">
+                            <i class="bi bi-journal-text"></i>
+                        </div>
+                        <div class="floating-book book-3">
+                            <i class="bi bi-bookmark"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-card">
+                        <i class="bi bi-book-fill"></i>
+                        <h3>5 234</h3>
+                        <p>Livres au Total</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-card">
+                        <i class="bi bi-people-fill"></i>
+                        <h3>1 847</h3>
+                        <p>Membres Actifs</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-card">
+                        <i class="bi bi-bookmark-check-fill"></i>
+                        <h3>3 921</h3>
+                        <p>Livres Empruntés</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-card">
+                        <i class="bi bi-grid-3x3-gap-fill"></i>
+                        <h3>24</h3>
+                        <p>Catégories</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Books -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Livres en Vedette</h2>
+                <a href="books.html" class="view-all">Voir Tout <i class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://mc-static.maarifculture.com/product/9782253176725-gatsby-le-magnifique.jpg" alt="Gatsby le Magnifique" class="book-image">
+                            <span class="availability-badge available">Disponible</span>
+                        </div>
+                        <div class="book-info">
+                            <h5 class="book-title">Gatsby le Magnifique</h5>
+                            <p class="book-author">F. Scott Fitzgerald</p>
+                            <p class="book-category"><i class="bi bi-tag"></i> Littérature Classique</p>
+                            <button class="btn btn-primary btn-sm w-100">Réserver le Livre</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://mc-static.maarifculture.com/product/9782253115847-ne-tirez-pas-sur-loiseau-moqueur.jpg" alt="Ne tirez pas sur l'oiseau moqueur" class="book-image">
+                            <span class="availability-badge unavailable">Emprunté</span>
+                        </div>
+                        <div class="book-info">
+                            <h5 class="book-title">Ne tirez pas sur l'oiseau moqueur</h5>
+                            <p class="book-author">Harper Lee</p>
+                            <p class="book-category"><i class="bi bi-tag"></i> Fiction</p>
+                            <button class="btn btn-secondary btn-sm w-100" disabled>Non Disponible</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="http://booksondemand.ma/cdn/shop/products/1_dc7d5ded-eff3-48dd-b8a9-14ea9d25104d.jpg?v=1668004764&width=1100" alt="1984" class="book-image">
+                            <span class="availability-badge available">Disponible</span>
+                        </div>
+                        <div class="book-info">
+                            <h5 class="book-title">1984</h5>
+                            <p class="book-author">George Orwell</p>
+                            <p class="book-category"><i class="bi bi-tag"></i> Science-Fiction</p>
+                            <button class="btn btn-primary btn-sm w-100">Réserver le Livre</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://fr.web.img5.acsta.net/c_310_420/medias/nmedia/18/35/99/80/18461215.jpg" alt="Orgueil et Préjugés" class="book-image">
+                            <span class="availability-badge available">Disponible</span>
+                        </div>
+                        <div class="book-info">
+                            <h5 class="book-title">Orgueil et Préjugés</h5>
+                            <p class="book-author">Jane Austen</p>
+                            <p class="book-category"><i class="bi bi-tag"></i> Romance</p>
+                            <button class="btn btn-primary btn-sm w-100">Réserver le Livre</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Preview -->
+    <section class="categories-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Parcourir par Catégorie</h2>
+                <a href="categories.html" class="view-all">Voir Toutes les Catégories <i class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <a href="categories.html" class="category-card">
+                        <i class="bi bi-journal-text"></i>
+                        <h5>Fiction</h5>
+                        <p>1 234 livres</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <a href="categories.html" class="category-card">
+                        <i class="bi bi-mortarboard"></i>
+                        <h5>Science</h5>
+                        <p>892 livres</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <a href="categories.html" class="category-card">
+                        <i class="bi bi-laptop"></i>
+                        <h5>Technologie</h5>
+                        <p>567 livres</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <a href="categories.html" class="category-card">
+                        <i class="bi bi-clock-history"></i>
+                        <h5>Histoire</h5>
+                        <p>743 livres</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="footer-title">Bibliothèque ScholarHub</h5>
+                    <p>Votre porte d'entrée vers la connaissance et l'imagination. Découvrez, apprenez et grandissez avec notre vaste collection.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">Liens Rapides</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="books.html">Livres</a></li>
+                        <li><a href="categories.html">Catégories</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Horaires de la Bibliothèque</h5>
+                    <ul class="footer-links">
+                        <li>Lundi - Vendredi : 8h00 - 20h00</li>
+                        <li>Samedi : 9h00 - 17h00</li>
+                        <li>Dimanche : Fermé</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5 class="footer-title">Contactez-nous</h5>
+                    <ul class="footer-links">
+                        <li><i class="bi bi-geo-alt"></i> 123 Rue de l'École</li>
+                        <li><i class="bi bi-telephone"></i> +212 5 22 123 456</li>
+                        <li><i class="bi bi-envelope"></i> bibliotheque@scholar.edu</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2026 Bibliothèque ScholarHub. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

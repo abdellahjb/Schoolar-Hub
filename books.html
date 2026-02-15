@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque ScholarHub - Livres</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-book-half"></i>
+                <span>ScholarHub</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="books.html">Livres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="categories.html">Catégories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link admin-link" href="admin.html">
+                            <i class="bi bi-shield-lock"></i> Admin
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Parcourir Notre Collection</h1>
+            <p>Explorez des milliers de livres dans tous les genres et sujets</p>
+        </div>
+    </section>
+
+    <!-- Books Content -->
+    <section class="content-section">
+        <div class="container">
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Rechercher des livres par titre, auteur ou ISBN...">
+                    <button class="btn btn-primary" type="button">
+                        <i class="bi bi-search"></i> Rechercher
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons mb-4">
+                <button class="filter-btn active">Tous les Livres</button>
+                <button class="filter-btn">Disponible</button>
+                <button class="filter-btn">Emprunté</button>
+                <button class="filter-btn">Nouveautés</button>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="mb-4">
+                <label for="categoryFilter" class="form-label fw-bold">Filtrer par Catégorie :</label>
+                <select class="form-select" id="categoryFilter" style="max-width: 300px;">
+                    <option selected>Toutes les Catégories</option>
+                    <option>Fiction</option>
+                    <option>Non-Fiction</option>
+                    <option>Science</option>
+                    <option>Technologie</option>
+                    <option>Histoire</option>
+                    <option>Biographie</option>
+                    <option>Littérature Classique</option>
+                    <option>Science-Fiction</option>
+                    <option>Mystère</option>
+                    <option>Romance</option>
+                    <option>Fantasy</option>
+                    <option>Développement Personnel</option>
+                </select>
+            </div>
+
+            <!-- Books Grid -->
+            <div class="row">
+                <!-- Book 1 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://fr.web.img4.acsta.net/c_310_420/medias/nmedia/18/86/89/36/20531934.jpg" alt="Gatsby le Magnifique" class="book-image">
+                            <span class="availability-badge available">Disponible</span>
+                        </div>
+                        <div class="book-info">
+                            <h5 class="book-title">Gatsby le Magnifique</h5>
+                            <p class="book-author">F. Scott Fitzgerald</p>
+                            <p class="book-category"><i class="bi bi-tag"></i> Littérature Classique</p>
+                            <p class="text-muted small mb-2">ISBN: 978-0-7432-7356-5</p>
+                            <button class="btn btn-primary btn-sm w-100">Réserver le Livre</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book 2 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://booksondemand.ma/cdn/shop/files/9782253115847.jpg?v=1760258782&width=1100" alt="Ne tirez pas sur l'oiseau moqueur" class="book-image">
+                            <span class="availability-badge unavailable">Emprunté</span>
+                        </div>
+                        <div class="book-info">
+                            <h5 class="book-title">Ne tirez pas sur l'oiseau moqueur</h5>
+                            <p class="book-author">Harper Lee</p>
+                            <p class="book-category"><i class="bi bi-tag"></i> Fiction</p>
+                            <p class="text-muted small mb-2">ISBN: 978-0-06-112008-4</p>
+                            <button class="btn btn-secondary btn-sm w-100" disabled>Non Disponible</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book 3 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="http://booksondemand.ma/cdn/shop/products/1_dc7d5ded-eff3-48dd-b8a9-14ea9d25104d.jpg?v=1668004764&width=1100" alt="1984" class="book-image">
+                            <span class="availability-badge available">Disponible</span>
+                        </div>
+                        <div class="book-info">
+                            <h5 class="book-title">1984</h5>
+                            <p class="book-author">George Orwell</p>
+                            <p class="book-category"><i class="bi bi-tag"></i> Science-Fiction</p>
+                            <p class="text-muted small mb-2">ISBN: 978-0-452-28423-4</p>
+                            <button class="btn btn-primary btn-sm w-100">Réserver le Livre</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book 4 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://fr.web.img5.acsta.net/c_310_420/medias/nmedia/18/35/99/80/18461215.jpg" alt="Orgueil et Préjugés" class="book-image">
+                            <span class="availability-badge available">Disponible</span>
+                        </div>
+                        <div class="book-info">
+                            <h5 class="book-title">Orgueil et Préjugés</h5>
+                            <p class="book-author">Jane Austen</p>
+                            <p class="book-category"><i class="bi bi-tag"></i> Romance</p>
+                            <p class="text-muted small mb-2">ISBN: 978-0-14-143951-8</p>
+                            <button class="btn btn-primary btn-sm w-100">Réserver le Livre</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book 5 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://mc-static.maarifculture.com/product/9782221157480-lattrape-coeurs.jpg" alt="L'Attrape-cœurs" class="book-image">
+                            <span class="availability-badge available">Disponible</span>
+                        </div>
+                        <div class="book-info">
+                            <h5 class="book-title">L'Attrape-cœurs</h5>
+                            <p class="book-author">J.D. Salinger</p>
+                            <p class="book-category"><i class="bi bi-tag"></i> Fiction</p>
+                            <p class="text-muted small mb-2">ISBN: 978-0-316-76948-0</p>
+                            <button class="btn btn-primary btn-sm w-100">Réserver le Livre</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book 6 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://booksondemand.ma/cdn/shop/files/916DM68L6cS-min.jpg?v=1692956637&width=493" alt="Harry Potter à l'école des sorciers" class="book-image">
+                            <span class="availability-badge available">Disponible</span>
+                        </div>
+                        <div class="book-info">
+                            <h5 class="book-title">Harry Potter à l'école des sorciers</h5>
+                            <p class="book-author">J.K. Rowling</p>
+                            <p class="book-category"><i class="bi bi-tag"></i> Fantasy</p>
+                            <p class="text-muted small mb-2">ISBN: 978-0-439-70818-8</p>
+                            <button class="btn btn-primary btn-sm w-100">Réserver le Livre</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book 7 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://booksondemand.ma/cdn/shop/files/71wNSrWLp-S._SL1500_-min.jpg?v=1704724088&width=493" alt="Le Hobbit" class="book-image">
+                            <span class="availability-badge unavailable">Emprunté</span>
+                        </div>
+                        <div class="book-info">
+                            <h5 class="book-title">Le Hobbit</h5>
+                            <p class="book-author">J.R.R. Tolkien</p>
+                            <p class="book-category"><i class="bi bi-tag"></i> Fantasy</p>
+                            <p class="text-muted small mb-2">ISBN: 978-0-547-92822-7</p>
+                            <button class="btn btn-secondary btn-sm w-100" disabled>Non Disponible</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book 8 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://www.babelio.com/couv/CVT_cvt_Le-code-Da-Vinci-decrypte_9380.jpg" alt="Le Code Da Vinci" class="book-image">
+                            <span class="availability-badge available">Disponible</span>
+                        </div>
+                        <div class="book-info">
+                            <h5 class="book-title">Le Code Da Vinci</h5>
+                            <p class="book-author">Dan Brown</p>
+                            <p class="book-category"><i class="bi bi-tag"></i> Mystère</p>
+                            <p class="text-muted small mb-2">ISBN: 978-0-307-47572-4</p>
+                            <button class="btn btn-primary btn-sm w-100">Réserver le Livre</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book 9 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://mc-static.maarifculture.com/product/9782266283038-le-meilleur-des-mondes.jpg" alt="Le Meilleur des mondes" class="book-image">
+                            <span class="availability-badge available">Disponible</span>
+                        </div>
+                        <div class="book-info">
+                            <h5 class="book-title">Le Meilleur des mondes</h5>
+                            <p class="book-author">Aldous Huxley</p>
+                            <p class="book-category"><i class="bi bi-tag"></i> Science-Fiction</p>
+                            <p class="text-muted small mb-2">ISBN: 978-0-06-085052-4</p>
+                            <button class="btn btn-primary btn-sm w-100">Réserver le Livre</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book 10 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://www.almouggar.com/web/image/product.product/464252/image?unique=0152700" alt="L'Alchimiste" class="book-image">
+                            <span class="availability-badge available">Disponible</span>
+                        </div>
+                        <div class="book-info">
+                            <h5 class="book-title">L'Alchimiste</h5>
+                            <p class="book-author">Paulo Coelho</p>
+                            <p class="book-category"><i class="bi bi-tag"></i> Fiction</p>
+                            <p class="text-muted small mb-2">ISBN: 978-0-06-112241-5</p>
+                            <button class="btn btn-primary btn-sm w-100">Réserver le Livre</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book 11 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://mc-static.maarifculture.com/product/9782401078550-la-ferme-des-animaux-1945.jpg" alt="La Ferme des animaux" class="book-image">
+                            <span class="availability-badge unavailable">Emprunté</span>
+                        </div>
+                        <div class="book-info">
+                            <h5 class="book-title">La Ferme des animaux</h5>
+                            <p class="book-author">George Orwell</p>
+                            <p class="book-category"><i class="bi bi-tag"></i> Littérature Classique</p>
+                            <p class="text-muted small mb-2">ISBN: 978-0-452-28424-1</p>
+                            <button class="btn btn-secondary btn-sm w-100" disabled>Non Disponible</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book 12 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://mc-static.maarifculture.com/product/9782075134040-le-seigneur-des-anneaux-tome-1.jpg" alt="Le Seigneur des Anneaux" class="book-image">
+                            <span class="availability-badge available">Disponible</span>
+                        </div>
+                        <div class="book-info">
+                            <h5 class="book-title">Le Seigneur des Anneaux</h5>
+                            <p class="book-author">J.R.R. Tolkien</p>
+                            <p class="book-category"><i class="bi bi-tag"></i> Fantasy</p>
+                            <p class="text-muted small mb-2">ISBN: 978-0-618-64561-5</p>
+                            <button class="btn btn-primary btn-sm w-100">Réserver le Livre</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <nav aria-label="Navigation des pages" class="mt-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Précédent</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Suivant</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="footer-title">Bibliothèque ScholarHub</h5>
+                    <p>Votre porte d'entrée vers la connaissance et l'imagination.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">Liens Rapides</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="books.html">Livres</a></li>
+                        <li><a href="categories.html">Catégories</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Horaires</h5>
+                    <ul class="footer-links">
+                        <li>Lundi - Vendredi : 8h00 - 20h00</li>
+                        <li>Samedi : 9h00 - 17h00</li>
+                        <li>Dimanche : Fermé</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5 class="footer-title">Contactez-nous</h5>
+                    <ul class="footer-links">
+                        <li><i class="bi bi-geo-alt"></i> 123 Rue de l'École</li>
+                        <li><i class="bi bi-telephone"></i> +212 5 22 123 456</li>
+                        <li><i class="bi bi-envelope"></i> bibliotheque@scholar.edu</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2026 Bibliothèque ScholarHub. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
